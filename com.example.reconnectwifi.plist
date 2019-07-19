@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>KeepAlive</key>
+<dict>
+	<key>NetworkState</key>
+	<false/>
+</dict>
+  <key>RunAtLoad</key>
+    <true/>
+        <key>Label</key>
+        <string>com.example.reconnectwifi</string>
+        <key>ProgramArguments</key>
+        <array>
+          <string>sh</string>
+          <string>-c</string>
+          <string>date; networksetup -setairportnetwork en0 YOUR_SSID YOUR_WIFI_PASSWORD</string>
+        </array>
+        <key>StandardOutPath</key>
+            <string>/Users/USER/reconnectwifi output.log</string>
+        <key>StandardErrorPath</key>
+            <string>/Users/USER/reconnectwifi output.log</string>
+        <key>StartInterval</key>
+        <integer>7200</integer>
+        <key>ThrottleInterval</key>
+        <integer>300</integer>
+</dict>
+</plist>
